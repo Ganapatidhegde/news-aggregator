@@ -1,0 +1,96 @@
+/* Filters.css */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  transition: box-shadow 0.3s ease;
+}
+
+.filters input[type="text"],
+.filters input[type="date"],
+.filters select {
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #ffffff;
+  color: #333;
+  min-width: 200px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.filters input[type="text"]:focus,
+.filters input[type="date"]:focus,
+.filters select:focus {
+  border-color: #42a5f5;
+  box-shadow: 0 0 0 3px rgba(66, 165, 245, 0.2);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters input[type="text"],
+  .filters input[type="date"],
+  .filters select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
+
+.filters label {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  padding: 8px 12px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filters label:hover {
+  background: #e0e0e0;
+}
+
+.filters input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #1e88e5;
+}
+
+.filters button {
+  padding: 12px 22px;
+  background: linear-gradient(to right, #1e88e5, #1565c0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(21, 101, 192, 0.2);
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.filters button:hover {
+  background: linear-gradient(to right, #1565c0, #0d47a1);
+  transform: scale(1.05);
+}
+
+.filters button:active {
+  transform: scale(0.98);
+}
