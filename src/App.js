@@ -5,6 +5,9 @@ import { fetchGuardianArticles } from './apis/guardianApi';
 import { fetchNYTArticles } from './apis/nytApi';
 import { Filters } from './components/Filters/Filter';
 import { NewsGrid } from './components/NewsGrid/NewsGrid';
+import { Loader } from './components/Loader/Loader';
+import { NoResults } from './components/NoRsults/NoResults';
+
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -67,14 +70,9 @@ function App() {
         handleSearch={handleSearch}
       />
 
-      {loading && (
-        <div className="loader-container">
-          <div className="spinner"></div>
-          <p>Fetching the latest news...</p>
-        </div>
-      )}
-
-      {!loading && <NewsGrid articles={articles} />}
+     {loading && <Loader text="Fetching the latest news..." />}
+      {!loading && articles.length === 0 && <NoResults />}
+      {!loading && articles.length > 0 && <NewsGrid articles={articles} />}
     </div>
   );
 }

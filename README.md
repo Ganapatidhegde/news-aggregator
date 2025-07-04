@@ -27,3 +27,16 @@ A responsive React-based news aggregator that fetches articles from:
    cd news-aggregator
    npm install
    npm start
+
+
+
+   ## 🐳 Running the Project with Docker
+
+### 1. Build the Docker image
+
+## 🐳 Running the Project with Docker
+docker build -t news-aggregator-frontend .
+
+
+## Run the container
+docker run -d -p 3000:80 news-aggregator-frontend

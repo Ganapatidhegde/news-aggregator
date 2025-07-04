@@ -5,6 +5,7 @@ body, html {
   background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #212121;
+  height: 100vh;
 }
 
 .App {
